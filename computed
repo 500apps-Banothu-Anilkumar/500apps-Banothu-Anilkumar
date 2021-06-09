@@ -1,0 +1,29 @@
+<script src="unpkg.com/vue/dist/vue"></script>
+<div id="two">
+<h1>Computing Properties</h1>
+<button v-on:click="count++">Coount-A</button>
+<button v-on:click="count1++">Coount-B</button>
+<p>A-{{count}}</p>
+<p>A-{{count1}}</p>
+</div>
+
+var obj=new Vue({
+el:"#two",
+data:
+{
+count:0,
+count1:0
+},
+methods:
+{
+a:function()
+{
+
+}
+}
+})
+
+button:hover
+{
+color: green;
+}
