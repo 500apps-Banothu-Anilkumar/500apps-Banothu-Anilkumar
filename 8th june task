@@ -1,0 +1,17 @@
+<script src="http://unpkg.com/vue/dist/vue"> </script>
+<div id="two">
+<h2>Data binding</h2>
+<input typ="text"placeholder="bind data"
+v-bind:value="msg" > <br><br>
+<a href="site"> clickme</a>
+<p></p>
+</div>
+
+new Vue({
+el:"#two",
+data:
+{
+msg:"anil",
+site:"http://www.google.com"
+}
+});
