@@ -1,0 +1,18 @@
+<script src="unpkg.com/vue/dist/vue"></script>
+<div id="two">
+<h2>Conditionals</h2>
+<button v-on:click="error=!error">Toggle Error</button>
+ <button v-on:click="success=!success"> Toggle success</button>
+ <p v-if="error">This is an error</p>
+  <p v-if="success">This is an success</p>
+</div>
+
+
+var obj=new Vue({
+el:"#two",
+data:
+{
+error:false,
+success:false
+}
+})
