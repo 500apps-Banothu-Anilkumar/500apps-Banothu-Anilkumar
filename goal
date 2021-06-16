@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+    <title></title>
+    <style>
+      .one{
+     background-color: green;
+     width: 20%;
+     height: 40%;
+     text-align: center;
+     margin:5%;
+      }
+    </style>
+  </head>
+  <body>
+ <header> 
+   <div class="one"> 
+   <h1> 
+     VUE COURSE GOALS
+   </h1>
+  </div>
+  <hr>
+  <div class="two">
+    <h3 id="one">My course goals</h3>
+    <hr>
+    <input type="text" >
+    <button style="background-color: red;">Add Goal</button>
+    <p>Manthra Technology is a product base company</p>
+    <input type="button" value="Goal" style="background-color: green;">
+  </div>
+ </header>
+    <div id="app"></div>
+  </body>
+</html>
+
