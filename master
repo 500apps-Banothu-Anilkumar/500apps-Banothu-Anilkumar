@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <h1>Monster  Slayer</h1>
+  </header>
+  <div id="game">
+<section id="monster" class="container">
+  <h2>Monster Health</h2>
+  <div class="healthbar">
+    <div class="healthbar_value">
+    </div>
+  </div>
+</section>
+   <section id="player" class="container">
+     <h2>Your Health</h2>
+     <div class="healthbar">
+       <div class="healthbar_value"></div>
+     </div>
+   </section>
+  </div>
+</body>
+</html>
+
+function getRandomValue()
+const app=Vue.createApp({
+data()
+{
+  return 
+  {
+    playerHealth:100;
+    monsterHealth:100;
+  }
+},
+methods:
+{
+  attackMonster()
+  {
+   const attackValue=Math.floor( Math.random()*(12-5))+5;
+   this.monsterHealth=this.monsterHealth-attackValue;
+  },
+  attckPlayer()
+  {
+    const attackValue=Math.floor( Math.random()*(15-8))+5;  
+    this.playerHealth-=attackValue;
+  }
+}
+});
+app.mount("#game")
