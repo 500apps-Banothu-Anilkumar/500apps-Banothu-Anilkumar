@@ -1,0 +1,37 @@
+<div id="app">
+<select>
+<option v-on:click="one()"> open</option>
+<option v-on:click="two()"> close</option>
+<option v-on:click="three()">pending</option>
+</select>
+<p> <b>email</b>   <b>id</b> <b>name</b> </p>
+</div>
+
+
+
+var obj=new Vue({
+el:"#app",
+data:
+{
+msg:[ 
+{"email": "Eliseo@gardner.biz","id": 1,"name": "id labore ex et quam laborum","status":"open"}, 
+{"email": "Jayne_Kuhic@sydney.com","id": 2,"name": "quovero reiciendis velit similiqueearum","status":"pending"}, 
+{"email": "Nikita@garfield.biz","id": 3,"name":"odioadipisci rerum aut animi","status":"closed"}, 
+{"email": "Lew@alysha.tv","id": 4,"name": "alias odio sit","status":"pending"} ] 
+},
+methods:
+{
+one:function()
+{
+console.log("Eliseo@gardner.biz"+""+1+""+"id labore ex et quam laborum");
+},
+two:function()
+{
+console.log("Jayne_Kuhic@sydney.com"+""+2+""+"quovero reiciendis velit similiqueearum");
+},
+three:function()
+{
+console.log("Nikita@garfield.biz"+""+3+""+"odioadipisci rerum aut animi");
+}
+}
+})
