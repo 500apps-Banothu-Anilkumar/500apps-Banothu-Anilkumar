@@ -1,0 +1,17 @@
+<script src="http://unpkg.com/vue/dist/vue"> </script>
+<template id="one">
+<div >
+  <h2>Welcome to vue js</h2>
+  <h2> {{ name }}   </h2>
+  <button  v-bind:disabled="false" >un-disabled</button>
+    <button  v-bind:disabled="true" >disabled</button>
+  </div>
+</template>
+
+var obj=new Vue({
+el:"#one",
+data:
+{
+name:'kalpana'
+}
+})
