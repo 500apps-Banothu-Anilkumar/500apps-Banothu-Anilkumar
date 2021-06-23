@@ -1,0 +1,78 @@
+<template>
+  <div id="app">
+    <login />
+  </div>
+</template>
+
+<script>
+import Login from './components/Login.vue'
+
+export default {
+  name: 'App',
+  components: {
+    Login
+  }
+}
+</script>
+
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
+
+
+<template>
+<div>
+  <h2>Form validation in vue js</h2>
+  <b>Please correct the following errors</b>
+<ul>
+  <li v-for=" e in error" v-bind:key="e.id">
+    {{e}}
+  </li>
+</ul>
+  <form @submit="login">
+    <input type="text" placeholder="username" v-model="name">  <br> <br>
+    <input type="password" placeholder="password" v-model="password"> <br> <br>
+<button type="submit">Login</button>
+  </form>
+</div>
+</template>
+<script>
+export default {
+  name:"Login",
+  data()
+  {
+    return{
+      error:[],
+      name:null,
+      password:null
+    }
+  },
+  methods:
+  {
+    login(e)
+    {
+      if(this.name && this.password)
+      { 
+      console.log("login was called")
+      }
+      this.error=[];
+      if(!this.name)
+      {
+        this.error.push("Name is required")
+      }
+      if(!this.password)
+      {
+        this.error.push("password is required")
+      }
+       e.preventdefault()
+    }
+  }
+}
+</script>
