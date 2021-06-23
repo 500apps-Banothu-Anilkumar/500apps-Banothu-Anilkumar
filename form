@@ -1,0 +1,71 @@
+<template>
+  <div id="app">
+    <SignUp/>
+  </div>
+</template>
+<script>
+import SignUp from './components/SignUp.vue'
+
+export default {
+  name: 'App',
+  components: {
+    SignUp
+  }
+}
+</script>
+
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
+
+
+<template>
+<div>
+  <input type="text" placeholder="Username" v-model="signup.username">  <br>  <br>
+    <input type="password" placeholder="password" v-model="signup.password">   <br> <br>
+    <p>Hobbies: </p>
+  <input type="checkbox" value="travel" id="travel" v-model="signup.hobbies">  
+<label for="travel">Travel</label>   <br> <br>
+
+<input type="checkbox" value="sports" id="sports" v-model="signup.hobbies">   
+<label for="sports">Sports</label>  <br> <br>
+    <p>Gender: </p>
+  <input type="checkbox" value="male" id="male" v-model="signup.gender">  
+<label for="male">Male</label>   <br> <br>
+  <input type="checkbox" value="female" id="female" v-model="signup.gender">  
+<label for="femle">Female</label> <br> <br>
+<button v-on:click="user">SignUp</button>     
+</div> 
+</template>  
+<script>
+export default 
+{
+  name:"SignUp",
+  data()
+  {
+    return{
+      signup:{  
+        username:null,
+        password:null,
+        hobbies:[],
+        gender:null
+        
+      }
+    } 
+  },
+  methods:
+  {
+    user()
+    {
+      console.warn(this.signup)
+    }
+  }
+}
+</script>
