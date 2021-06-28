@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="app.js"></script>
+  <link rel="stylesheet" href="style1.css">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <h1>FriendList</h1>
+  </header>
+  <section id="app">
+    <ul>
+    <li id="sec" v-for="friend in friends"> 
+      <h2 id="sec1"> {{ friend.Name }} </h2> 
+      <hr>
+      <button style="background-color: pink;">Show details</button>
+      <ul>
+        <li> <strong>Phone:</strong>{{friend.phone}}</li>
+        <li><strong>Email:</strong>{{friend.email}}</li>
+      </ul>
+    </li>
+    </ul>
+  </section>
+</body>
+</html>
+
+
+header{
+  background-color: rgb(156, 10, 59);
+color :  white;
+width: 50%;
+height: 30%;
+}
+#sec
+{
+  border-style: solid;
+}
+#sec1
+{
+  color: rgb(156, 10, 59);
+}
+.one
+{
+  border: 1px solid ;
+}
+.two
+{
+  border-style: 1px  solid;
+}
+
+
+const app = Vue.createApp({
+data()
+{
+return
+{
+friends:[ 
+ {  id:'592',
+  Name:'kumar',
+phone:'954266956',
+email:'banothuanilkumar98@gmail.com',
+},
+{ 
+id:'593',
+Name:'anil',
+phone:'7013813035',
+email:'kalpana98@gmail.com',
+},
+],
+}
+});
+app.mount('#app')
