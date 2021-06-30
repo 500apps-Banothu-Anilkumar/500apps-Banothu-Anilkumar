@@ -1,0 +1,41 @@
+<template>
+  <div id="app">
+    <h2>{{ greet}} {{ name }} </h2>
+    <div v-html="channel"> {{ channel }}</div>
+    <div v-html="hack"> {{hack}}</div>
+    <button v-bind:disabled="disable">Google</button>
+    <h2 class="underline">Underline Text</h2>
+    <h2></h2>
+  </div>
+</template>
+<script>
+export default {
+  name: 'App',
+ data()
+ {
+   return{
+     greet:"Hello",
+     name:"Anil kumar",
+     channel:"<b>codevolution</b>",
+     hack:'<a href="#" v-on:click="window.alert("You have been hacked")">Win a prize! </a>',
+    disable:false,
+    status:"danger"
+  };
+ },
+};
+</script>
+
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+.underline
+{
+  text-decoration: underline;
+}
+</style>
