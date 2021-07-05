@@ -1,0 +1,26 @@
+<template>
+  <div>
+    <h2>Add     method -{{add(2,3,5)}} </h2>
+    <h2>Add    method -{{sub(10)}}</h2>
+    <h2>Multiply method {{multiply(8,2)}}</h2> 
+  </div> 
+</template>
+<script>
+export default{
+name:'App',
+methods: {
+  add(a,b,c)
+  {
+return a+b+c
+  },
+  sub(a)
+  {
+return a*a
+  },
+  multiply(a,b)
+  {
+return a*b
+  }
+}
+}
+</script>
