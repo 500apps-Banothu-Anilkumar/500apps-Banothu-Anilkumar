@@ -1,0 +1,69 @@
+<template>
+<div>
+  <h1>Names58</h1>
+<div v-for="(name) in names" :key="name">  
+  <h2 v-if="name=='mummy'"> ANIL {{name}} </h2>
+</div> 
+<h2 v-for="(nam,index) in fullname " :key="nam"> {{nam.id}}-{{nam.dept}}-{{nam.age}}--{{index}}</h2>
+  <div v-for="actor in actors" :key="actor"> 
+    <h2> {{actor.title}} </h2>
+    <h3 v-for="movie in actor.movies" :key="movie">{{movie}}  </h3>
+  </div>
+  <div v-for="(info,key,val) in myinfo" :key="info">
+    <h2>{{info.address}}  </h2>
+    <h2> {{key}} :{{info.date}} {{val}}   </h2>
+    <h2 v-for=" (ge,key,index) in  info.gen" :key="ge"> {{ge}} :{{key}}-{{index}} </h2>
+  </div>
+  </div>
+</template>
+<script>
+export default
+{
+  data()
+  {
+    return{
+      names:["anil","kumar","mummy"],
+      fullname:[
+        {id:592,dept:"cse",age:24},
+        {id:593,dept:"ece",age:28},
+        {id:594,dept:"ece",age:18}
+      ],
+      actors:[
+        {
+          title:"Hero",
+          movies:["Thulasi","lakshmi","Billa"]
+        },
+          {
+            title:"Zero",
+          movies:["Billa","Mass","Magadera"]
+        },
+      ],
+      myinfo:
+      [
+        {    
+          date: "22/08/1998", 
+         address:"Kampally",
+         gen:["M","F"]
+        },
+        {    
+          date: "14/02/2003", 
+         address:"Mahabubabad",
+         gen:["M","F"]
+        },
+      ],
+
+    }
+  },
+}
+</script>
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+  text-align: center;
+}
+</style>
