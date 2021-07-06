@@ -1,0 +1,88 @@
+<template>
+<div>
+  <div id="app">
+    <h3> 
+    {{ JSON.stringify(formValues, null,2) }}
+    </h3>
+  </div>
+  <form>
+  <div>
+  <label>Name</label> <br> 
+  <input type="text" id="name" placeholder="Enter name.." v-model="formValues.name"> <br> <br>
+  </div>
+  <div> 
+  <label> Profile summary </label>  <br>
+  <textarea id="profile" v-model="formValues.profileSummary" />    <br>
+  </div>
+  <div>
+  <label>Choose country</label> <br>
+  <select id="country" v-model="formValues.country">
+  <option value="India"> India</option>
+  <option value="pakistan"> Pakistan</option>
+  <option value="China">China </option>
+  <option value="US">US </option>
+  <option value="Austrilla">Austrilla </option>
+  <option value="Malesia">Malesia </option>
+    <option value="Singapore">Singapore </option>
+  <option value="Vietnam">Vietnam </option>
+
+  </select>
+  </div>
+  <div>
+  <label>jobLocation</label> <br>
+  <select id="job-location" multiple v-model="formValues.jobLocation">
+  <option value="India"> India</option>
+  <option value="pakistan"> Pakistan</option>
+  <option value="China">China </option>
+  <option value="US">US </option>
+  <option value="Austrilla">Austrilla </option>
+  <option value="Malesia">Malesia </option>
+    <option value="Singapore">Singapore </option>
+  <option value="Vietnam">Vietnam </option>
+
+  </select>
+  </div>
+  </form>
+  </div>
+</template>
+<script>
+export default {
+  name: 'App',
+  data()
+  {
+    return{
+      formValues:{
+        name:'',
+        profileSummary:"",
+        country:"",
+        jobLocation:[]
+      }
+    }
+  }
+}
+</script>
+
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+input[type="text"]
+{
+  width:20%;
+  height:20px;
+}
+textarea
+{
+  width:20%;
+  height:30px;
+
+}
+select{
+  width:20%;
+}
+</style>
