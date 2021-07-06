@@ -1,0 +1,46 @@
+<template>
+<div id="App"> 
+    <h2> {{name}}</h2>
+    <div>
+    <button v-on:mouseover="name='kalpana'">change name</button>
+    </div>
+    <h2>{{count}}</h2>
+  <div> 
+    <button v-on:click="incre(1,$event)">incre-1 </button> <br> <hr>
+    <button v-on:click="incre(5)">incre-5 </button> <br>  <hr>
+    <button v-on:click="decre(1)">decre-1 </button> <br> <hr>
+    <button v-on:click="decre(5)">decre-5 </button>  <br> <hr>
+     </div> 
+     </div>
+    </template> 
+<script>
+export default {
+  name: 'App',
+ data()
+ {
+   return {
+     name:"Anil kumar",
+    count:0
+   }
+ },
+ methods:
+ {
+   incre(a)
+   {
+     return this.count+=a
+    
+   },
+   decre(a)
+   {
+     return this.count-=a
+   }
+ }
+}
+</script>
+
+<style>
+#App
+{
+  text-align: centerue 
+}
+</style>
