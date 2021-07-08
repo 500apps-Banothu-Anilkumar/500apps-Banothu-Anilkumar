@@ -1,0 +1,65 @@
+var val=10; //variables
+val=25;
+document.writeln(typeof(val));
+console.log("answer is ",val); //console  output
+document.write("answer is ",val);
+var name2=prompt("Enter a  name");  //prompt to enter name 
+alert("name is "+name2); //console output
+confirm("confirm mail id"); //confirm console
+function msg(val)   //function
+{
+  alert("HEllo mr:"+"Anil"+" and mrs:"+"kalpana"+val);
+  window.print("welcome");
+}
+msg("Anil");
+document.writeln("");
+var names={age:25,class:10,name:"kumar"};
+for(var item in names)
+{
+  document.writeln(names[item]);
+} 
+function voidfun()
+{
+  console.log("hi");
+}
+var name1=["one","two"] ;
+for(var i=0;i<name1.length;i++)
+{
+  document.write(name1[i]);
+}
+var val=prompt("Enter a number");
+var arr=[val-1];
+for(var i=0;i<val;i++)
+{
+prompt(arr[i].push("Enter "+i+" value"));
+}
+for(var i=0;i<arr.length;i++)
+{
+  document.write(arr[i]);
+}
+const arr=[4,6,8,7,77,25,8,6,9,25,56,54,30,];
+const a=arr[0];
+onst b=arr[1];
+const c=arr[2];
+console.log(a);        
+const array=[];
+const []=arr;
+console.log(d,e,f); */
+const arr=[7,8,9];
+const newa=[10,12,arr[0],arr[1],arr[2]];
+console.log(newa);
+const Arrn=[10,12,...arr];
+console.log(Arrn);
+console.log(...arr,...Arrn);
+function add( ...input )
+{
+  var sum=0;
+  for(var i of input)
+  {
+    sum+=i;
+  }
+  return sum;
+}
+console.log(add(5,2,3));
+
+console.log(false && true ||false ||true)
