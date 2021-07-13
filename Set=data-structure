@@ -1,0 +1,20 @@
+let set = new Set();
+let john = { name: "John" };
+let pete = { name: "Pete" };
+let mary = { name: "Mary" };
+set.add(john);
+set.add(pete);
+set.add(mary);
+set.add(john);
+set.add(mary);
+alert( set.size );
+for (let user of set) {
+  alert(user.name); 
+  }
+  
+let var1 = { name: 'Jim' }
+let var2 = var1;
+let var0={  id:592  }
+var var0="kumar"
+console.log(var0)
+console.log(typeof(var0))
