@@ -1,0 +1,21 @@
+const map=new Map();
+map.set("594","Kalpana");
+map.set("592","anil kumar");
+map.set("593","Nagamani");
+console.log(map.get("592"));
+console.log(map.get("595"));
+console.log(map.get("594"));
+alert(map.size);
+let map2=new Map([
+[1,"Anil"],
+[2,"alright"]
+]);
+for(let a of map2.values())
+console.log(a);
+let recipeMap=new Map();
+recipeMap.set(1,"one");
+recipeMap.set(2,"two");
+recipeMap.set(3,"three");
+recipeMap.forEach( (value, key, map) => {
+  alert(` ${value}:${key}`); 
+});  
